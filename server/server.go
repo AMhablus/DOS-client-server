@@ -22,10 +22,9 @@ type Reply struct {
 	History []string
 }
 
-func (cs *ChatServer) SendMessage(msg Message, reply *Reply) error {
-	//SendMessage appends a new message and returns the full chat history.
+func (cs *ChatServer) SendMessage(msg Message, reply *Reply) error { //appends a new message and returns the full chat history.
 	cs.mu.Lock()
-	defer cs.mu.Unlock()
+	defer cs.mu.Unlock() // to prevent deadlocks
 
 	formatted := fmt.Sprintf("%s: %s", msg.Sender, msg.Content)
 	cs.Messages = append(cs.Messages, formatted)
