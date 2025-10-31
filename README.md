@@ -2,6 +2,9 @@
 
 This is a simple Go project that demonstrates how to use **RPC (Remote Procedure Call)** for communication between a client and a server.
 
+## Recording Link
+- Google Drive: [Click Here!](https://drive.google.com/file/d/1pNZOylBWN6v6ypiEDr_PuyPvmCPsG-b3/view?usp=sharing)
+
 ## 📘 Overview
 - The **server** listens for incoming TCP connections and serves RPC requests.
 - The **client** connects to the server and makes remote procedure calls as if they were local functions.
